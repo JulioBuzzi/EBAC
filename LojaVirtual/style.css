@@ -178,6 +178,10 @@ footer .footer-content ul li a:hover {
     .produtos h2 {
         padding-top: 1rem;
     }
+
+    footer {
+        display: none;
+    }
 }
 
 @media screen and (max-width: 640px) {
@@ -240,5 +244,9 @@ footer .footer-content ul li a:hover {
         width: 100%;
         padding: 0.75rem;
         font-weight: bold;
+    }
+
+    footer {
+        display: none;
     }
 }
