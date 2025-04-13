@@ -101,6 +101,33 @@ body {
     cursor: pointer;
 }
 
+footer {
+    background-color: #02b620;
+    color: #000000;
+    padding: 1rem 0;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+footer .footer-content ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .footer-content ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+footer .footer-content ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+footer .footer-content ul li a:hover {
+    text-decoration: underline;
+}
+
 @media screen and (min-width: 641px) and (max-width: 1023px) {
     .primeiro, .segundo {
         width: 50%;
