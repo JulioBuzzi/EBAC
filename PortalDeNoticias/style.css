@@ -18,17 +18,9 @@ header .container{
 }
 
 header {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-    background-color: white;
-    padding: 1rem 0 0;
-    border-bottom: 1px solid rgb(12, 133, 1);
-}
-
-body {
-    padding-top: 9rem; 
+    padding: 16px 0 0;
+    border-bottom: 1px solid green;
+    margin-bottom: 56px;
 }
 
 input {
@@ -50,7 +42,7 @@ input:focus{
     display: none;
     position: absolute;
     left: 0;
-    width: 300px;
+    width: 250px;
     top: 100%;
     border: 1px solid green;
     background-color: white;
@@ -64,7 +56,7 @@ input:focus{
     position: relative;
 }
 
-button.menu {
+button.botaoSubmit {
     padding: 0.8rem;
     border:none;
     border-radius: .5rem;
@@ -73,7 +65,7 @@ button.menu {
     cursor: pointer;
 }
 
-button.menu:hover {
+button.botaoSubmit:hover {
     background-color: green;
     color:white;
 }
@@ -97,7 +89,6 @@ button.menu:hover {
 .submenu li {
     display: block;
     padding: 8px;
-
 }
 
 .submenu li a {
@@ -164,4 +155,212 @@ article a {
 h2 {
     color: rgb(1, 94, 1);
     font-weight: 1000;
+}
+
+.botao-menu button {
+    padding: 8px;
+    background-color: greenyellow;
+    border-radius: .5rem;
+    border: 1px solid green;
+}
+
+.botao-menu button:hover {
+    background-color: rgb(107, 163, 22);
+}
+/*==================MEDIAS QUERY========================*/
+
+@media screen and (max-width: 767px) {
+    .conteudo {
+        display: block;
+    }
+
+    .container {
+        max-width: 90%;
+    }
+
+    .destaque .noticia a {
+        display: block;
+        font-size: 1.5rem;
+    }
+    
+    .destaque .noticia img {
+        margin-right: 0;
+    }
+
+    .noticias {
+        display: block;
+    }
+
+    .noticias .noticia {
+        margin-bottom: 32px;
+    }
+
+    aside {
+        padding-left: 0;
+    }
+
+    header div.container{
+        flex-direction: column;
+    }
+
+    .submenu{
+        display: block;
+        position: relative;
+        width: 100%;
+        border: none;
+    }
+
+    .menu {
+        display: none;
+    }
+    
+    .menu > li{
+        clear: both;
+    }
+    
+    button.botaoSubmit {
+        padding: 0.8rem;
+        border:none;
+        border-radius: .5rem;
+        background-color: rgb(30, 172, 30);
+        color:rgb(216, 215, 213);
+        cursor: pointer;
+    }
+    
+    button.botaoSubmit:hover {
+        background-color: green;
+        color:white;
+    }
+
+    .menu li{
+        cursor: pointer;
+    }
+
+    .submenu li {
+        display: block;
+        padding: 8px;
+    
+    }
+    
+    .submenu li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(42, 151, 28);
+        border-radius: .5rem;
+        padding: .2rem;
+    }
+    
+    .botao-menu {
+        display: flex;
+        justify-content: center;
+        margin-top: 16px;
+        padding-bottom: 16px;
+    }
+
+    .botao-menu button {
+        padding: 8px;
+        background-color: greenyellow;
+        border-radius: .5rem;
+        border: 1px solid green;
+    }
+
+    .botao-menu button:hover {
+        background-color: rgb(107, 163, 22);
+    }
+}
+
+@media screen and (min-width:786px) and (max-width: 1023px){
+    .container {
+        max-width: 90%;
+    }
+
+    .botao-menu {
+        display: none;
+    }
+
+    .destaque .noticia a{
+        font-size: 1.5rem;
+    }
+
+    .noticias {
+        grid-template-columns: repeat(2, 49%);
+    }
+
+    button.botaoSubmit {
+        padding: 0.8rem;
+        border:none;
+        border-radius: .5rem;
+        background-color: rgb(30, 172, 30);
+        color:rgb(216, 215, 213);
+        cursor: pointer;
+    }
+    
+    button.botaoSubmit:hover {
+        background-color: green;
+        color:white;
+    }
+
+    
+    .submenu{
+        display: none;
+        position: absolute;
+        left: 0;
+        width: 300px;
+        top: 100%;
+        border: 1px solid green;
+        background-color: white;
+    }
+
+    .menu > li{
+        float: left;
+        list-style-type: none;
+        padding: 16px;
+        border-top: 4px solid transparent;
+        position: relative;
+    }
+
+
+    .clear {
+        clear: both;
+    }
+
+    .menu li{
+        cursor: pointer;
+    }
+
+    .menu li:hover .submenu{
+        display: block;
+    }
+
+    .menu li:hover {
+        border-color: green;
+    }
+
+    .submenu li {
+        display: block;
+        padding: 8px;
+
+    }
+
+    .submenu li a {
+        text-decoration: none;
+        color: rgb(0, 0, 0);
+        border: 1px solid rgb(42, 151, 28);
+        border-radius: .5rem;
+        padding: .2rem;
+    }
+
+    .submenu li a:hover {
+        color: rgb(68, 245, 92);
+        font-weight: bolder;
+        background-color: rgba(0,0,0,0.5);
+        transition: 0.3s;
+    }
+}
+
+@media screen and (min-width:1024px) {  
+    .botao-menu {
+        display: none;
+    }
+    
 }

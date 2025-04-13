@@ -1,0 +1,217 @@
+* {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+        font-family: Roboto, sans-serif;
+}
+    
+.container {
+        max-width: 1024px;
+        width: 100%;
+        margin: 0 auto;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem;
+    margin: 0 auto;
+}
+
+header {
+    background-color: aquamarine;
+    margin-bottom: 3rem;
+}
+
+body {
+    background-color:aliceblue;
+}
+
+.menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.menu h2 {
+    font-size: 1rem;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.conteudo {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5rem;
+}
+
+.conteudo h2 {
+    margin-bottom: 5rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+    border-bottom: 3px solid aqua;
+    color: aqua;
+}
+
+.conteudo img{
+    max-width: 100%;
+    margin-right: 2rem;
+}
+
+
+.produtos h2 {
+    padding-bottom: 1rem;
+    border-bottom: 3px solid aqua;
+    color: aqua;
+    margin-bottom: 3rem;
+}
+
+.produtos ul {
+    display:grid;
+    grid-template-columns: repeat(4,24.5%);
+    list-style: none;
+}
+
+.produtos ul li{
+    margin-left: 1rem;
+}
+
+.produtos img {
+    max-width: 100%;
+}
+
+.produtos h3 {
+    margin-top: 1rem;
+}
+
+.produtos p {
+    margin-top: 1rem;
+}
+
+.produtos button {
+    padding: .5rem 3rem;
+    border: none;
+    border-radius: .5rem;
+    background-color: aqua;
+    margin-top: 1rem;
+}
+
+.produtos button:hover {
+    background-color: blue;
+    cursor: pointer;
+}
+
+@media screen and (min-width: 641px) and (max-width: 1023px) {
+    .primeiro, .segundo {
+        width: 50%;
+        padding: 1rem;
+    }
+
+    body {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .conteudo {
+        display: flex;
+        flex-direction: column;
+        margin-left: 0;
+        margin-bottom: 3rem;
+    }
+
+    .conteudo img {
+        width: 100%;
+        margin: 0 0 1rem 0;
+    }
+
+    .conteudo h2 {
+        margin-bottom: 1rem;
+        padding-bottom: 0.5rem;
+        border-bottom: 3px solid aqua;
+        color: aqua;
+    }
+
+    .produtos ul {
+        display: grid;
+        grid-template-columns: repeat(2, 48%);
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .produtos ul li {
+        margin-left: 0;
+    }
+
+    .produtos button {
+        width: 100%;
+        padding: 0.5rem;
+    }
+
+    .produtos h2 {
+        padding-top: 1rem;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    body {
+        display: block;
+        background-color: aliceblue;
+    }
+
+    header {
+        width: 100%;
+        background-color: aquamarine;
+    }
+
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.5rem;
+        padding: 1rem;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 0.25rem;
+    }
+
+    .primeiro,
+    .segundo {
+        width: 100%;
+        padding: 1rem;
+    }
+
+    .conteudo {
+        flex-direction: column;
+    }
+
+    .conteudo img {
+        width: 100%;
+        height: auto;
+        margin: 0 0 1rem 0;
+    }
+
+    .conteudo h2 {
+        font-size: 1.2rem;
+        margin-bottom: 0.5rem;
+    }
+
+    .produtos ul {
+        display: block;
+    }
+
+    .produtos ul li {
+        margin: 1rem 0;
+    }
+
+    .produtos h2 {
+        font-size: 1.4rem;
+    }
+
+    .produtos button {
+        width: 100%;
+        padding: 0.75rem;
+        font-weight: bold;
+    }
+}
